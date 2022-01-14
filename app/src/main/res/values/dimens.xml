@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen55">55dp</dimen>
+    <dimen name="dimen100">100dp</dimen>
+    <dimen name="dimen145">145dp</dimen>
+    <dimen name="dimen54">54dp</dimen>
+    <dimen name="dimen48">48dp</dimen>
+    <dimen name="dimen32">32dp</dimen>
+    <dimen name="dimen28">28dp</dimen>
+    <dimen name="dimen24">24dp</dimen>
+    <dimen name="dimen20">20dp</dimen>
+    <dimen name="dimen16">16dp</dimen>
+    <dimen name="dimen14">14dp</dimen>
+    <dimen name="dimen12">12dp</dimen>
+    <dimen name="dimen10">10dp</dimen>
+    <dimen name="dimen8">8dp</dimen>
+    <dimen name="dimen6">6dp</dimen>
+    <dimen name="dimen4">4dp</dimen>
+    <dimen name="dimen2">2dp</dimen>
+
+    <dimen name="font36">36sp</dimen>
+    <dimen name="font24">24sp</dimen>
+    <dimen name="font20">20sp</dimen>
+    <dimen name="font18">18sp</dimen>
+    <dimen name="font16">16sp</dimen>
+    <dimen name="font14">14sp</dimen>
+    <dimen name="font12">12sp</dimen>
+    <dimen name="font10">10sp</dimen>
+    <dimen name="lineWidth">1dp</dimen>
+
+
+    <dimen name="font_title">14sp</dimen>
+    <dimen name="font_sub_title">12sp</dimen>
+    <dimen name="font_body_1">10sp</dimen> // bold
+    <dimen name="font_body_2">10sp</dimen> // medium
+    <dimen name="font_body_3">8sp</dimen> // bold
+    <dimen name="font_body_4">8sp</dimen>  // medium
+    <dimen name="font_caspion_1">6sp</dimen> // bold
+    <dimen name="font_caspion_2">6sp</dimen> // medium
+
+</resources>
