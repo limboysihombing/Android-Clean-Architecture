@@ -8,8 +8,9 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface HabitDao {
-    @Query("SELECT * FROM habit order by name asc")
-    fun getAllHabit(): Flow<List<HabitEntity>>
+    @Transaction
+    @Query("SELECT * FROM habit ORDER BY datetime()")
+    fun getAllHabit(): Flow<List<HabitWithDailyGoals>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertHabits(habit: List<HabitEntity>)
@@ -18,12 +19,10 @@ interface HabitDao {
     suspend fun insertHabit(habit: HabitEntity)
 
     @Insert(onConflict =  OnConflictStrategy.REPLACE)
-    suspend fun insertDailyGoal(dailyGoalEntity: DailyGoalEntity)
+    suspend fun insertDailyGoal(dailyGoalEntity: List<DailyGoalEntity>)
 
     @Update
     fun updateHabit(habit: HabitEntity)
 
-    @Transaction
-    @Query("SELECT * FROM habit ORDER BY datetime()")
-    fun getAllHabitWithDailyGoals(): Flow<List<HabitWithDailyGoals>>
+
 }

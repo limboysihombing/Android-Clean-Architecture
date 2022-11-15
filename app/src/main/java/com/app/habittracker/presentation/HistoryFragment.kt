@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.app.habittracker.R
 
-
 class HistoryFragment : Fragment() {
 
     override fun onCreateView(
@@ -17,5 +16,4 @@ class HistoryFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_history, container, false)
     }
-
 }

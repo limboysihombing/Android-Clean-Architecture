@@ -2,4 +2,8 @@
     <string name="app_name">Habit Tracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello home fragment</string>
+    <string name="close">Tutup</string>
+    <string name="request_error">Request Gagal</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
 </resources>

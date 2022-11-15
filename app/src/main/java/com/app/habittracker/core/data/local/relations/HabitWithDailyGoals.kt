@@ -12,4 +12,4 @@ data class HabitWithDailyGoals (
             entityColumn = "habitEntityId"
     )
     val dailyGoalEntities: List<DailyGoalEntity>
-        )
+)

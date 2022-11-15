@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         if (Build.VERSION.SDK_INT >= 21) {
             val window: Window = this.getWindow()
 

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="Set Pengulangan"
+        android:text="Set Durasi"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -20,9 +20,30 @@
         android:layout_height="1dp"
         android:layout_marginBottom="10dp"
         android:background="#BDBDBD" />
-    <NumberPicker
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <NumberPicker
+            android:id="@+id/npHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginEnd="8dp"/>
+        <NumberPicker
+            android:id="@+id/npMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnSaveDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Simpan" />
 
 </LinearLayout>

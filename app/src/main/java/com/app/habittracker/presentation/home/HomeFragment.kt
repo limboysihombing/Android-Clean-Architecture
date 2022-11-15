@@ -1,6 +1,5 @@
 package com.app.habittracker.presentation.home
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.habittracker.core.data.Resource
 import com.app.habittracker.databinding.FragmentHomeBinding
-import com.vivekkaushik.datepicker.DatePickerTimeline
+import com.app.habittracker.presentation.home.viewModels.HomeViewModel
 import com.vivekkaushik.datepicker.OnDateSelectedListener
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
@@ -56,7 +55,7 @@ class HomeFragment : Fragment() {
             }
 
             binding.fabOpenCreateActivity.setOnClickListener {
-                val intent = Intent(activity, CreateHabitActivity::class.java)
+                val intent = Intent(activity, FormHabitActivity::class.java)
                 startActivity(intent)
             }
 

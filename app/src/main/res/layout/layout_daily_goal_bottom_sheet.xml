@@ -49,7 +49,7 @@
         android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/blue_dark"
         android:textColor="@color/white"
         android:layout_margin="16dp"
         android:text="Simpan"/>

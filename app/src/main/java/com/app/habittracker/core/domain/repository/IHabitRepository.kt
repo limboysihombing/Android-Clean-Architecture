@@ -8,6 +8,5 @@ import kotlinx.coroutines.flow.Flow
 interface IHabitRepository {
     fun getAllHabit() : Flow<Resource<List<Habit>>>
     suspend fun insertHabit(habit: Habit)
-    suspend fun insertDailyGoal(dailyGoal: DailyGoal)
     fun updateHabit(habit: Habit)
 }

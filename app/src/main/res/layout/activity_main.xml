@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary"
+    android:background="@color/blue_dark"
     tools:context=".presentation.main.MainActivity">
     <LinearLayout
         android:id="@+id/layout_app_bar"

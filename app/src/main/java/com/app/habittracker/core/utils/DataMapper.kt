@@ -24,7 +24,6 @@ object DataMapper {
             input.map {
                 DailyGoal(
                         id = it.id,
-                        habitId = it.habitEntityId,
                         type = it.type,
                         name = it.name,
                         duration = it.duration,

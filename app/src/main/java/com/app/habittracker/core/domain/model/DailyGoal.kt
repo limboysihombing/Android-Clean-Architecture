@@ -9,12 +9,9 @@ import java.util.*
 @Parcelize
 data class DailyGoal(
         val id : Int,
-        val habitId: Int,
-        val type: String,
         val name: String,
+        val type: String,
         val duration: Int,
         val reminder: Boolean,
         val doAt: String
-
-
 ): Parcelable

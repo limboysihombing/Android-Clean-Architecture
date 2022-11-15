@@ -10,7 +10,6 @@ import com.app.habittracker.core.domain.model.Habit
 import com.app.habittracker.core.domain.repository.IHabitRepository
 import com.app.habittracker.core.utils.AppExecutors
 import com.app.habittracker.core.utils.DataMapper
-import com.app.habittracker.core.utils.DateTimeConverter
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -21,13 +20,12 @@ class HabitRepository @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val appExecutor: AppExecutors
 ): IHabitRepository {
-
     override fun getAllHabit(): Flow<Resource<List<Habit>>> =
         object : NetworkBoundResource<List<Habit>, List<HabitEntity>>(){
 
             @RequiresApi(Build.VERSION_CODES.O)
             override fun loadFromDb(): Flow<List<Habit>> {
-                return localDataSource.GetAllHabitWithGoals().map {
+                return localDataSource.getAllHabit().map {
                     DataMapper.mapEntitiesToDomain(it)
                 }
             }
@@ -38,12 +36,13 @@ class HabitRepository @Inject constructor(
     override suspend fun insertHabit(habit: Habit) {
         val habitEntity = DataMapper.mapDomainToEntity(habit)
         localDataSource.insertHabit(habitEntity)
-        /*appExecutor.diskIO().execute{  }*/
-    }
 
-    override suspend fun insertDailyGoal(dailyGoal: DailyGoal) {
-        val dailyGoalEntity = DailyGoalEntity(dailyGoal.id, dailyGoal.habitId, dailyGoal.type, dailyGoal.name, dailyGoal.duration, dailyGoal.reminder, dailyGoal.doAt.toString())
-        localDataSource.insertHabitDailyGoal(dailyGoalEntity)
+        // daily goals
+        val dailyGoals = habit.dailyGoals.map {
+            DailyGoalEntity(it.id, habitEntity.id, it.type, it.name, it.duration, it.reminder, it.doAt)
+        }
+        localDataSource.insertDailyGoals(dailyGoals)
+        /*appExecutor.diskIO().execute{  }*/
     }
 
     override fun updateHabit(habit: Habit) {

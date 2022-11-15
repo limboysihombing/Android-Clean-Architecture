@@ -10,15 +10,15 @@ import javax.inject.Singleton
 
 @Singleton
 class LocalDataSource @Inject constructor(private val habitDao: HabitDao) {
-    fun getAllHabit(): Flow<List<HabitEntity>> = habitDao.getAllHabit()
+    fun getAllHabit(): Flow<List<HabitWithDailyGoals>> = habitDao.getAllHabit()
 
-    fun GetAllHabitWithGoals(): Flow<List<HabitWithDailyGoals>> = habitDao.getAllHabitWithDailyGoals()
+//    fun GetAllHabitWithGoals(): Flow<List<HabitWithDailyGoals>> = habitDao.getAllHabitWithDailyGoals()
 
     suspend fun insertHabits(habitList: List<HabitEntity>) = habitDao.insertHabits(habitList)
 
     suspend fun insertHabit(habit: HabitEntity) = habitDao.insertHabit(habit)
 
-    suspend fun insertHabitDailyGoal(dailyGoal: DailyGoalEntity) = habitDao.insertDailyGoal(dailyGoal)
+    suspend fun insertDailyGoals(dailyGoal: List<DailyGoalEntity>) = habitDao.insertDailyGoal(dailyGoal)
 
     fun updateHabit(habit: HabitEntity){
         habitDao.updateHabit(habit)

@@ -20,7 +20,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.home.CreateHabitActivity">
+        tools:context=".presentation.home.FormHabitActivity">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -44,8 +44,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Habit Name"
-                    android:textColorHint="@color/primary"
-                    app:hintTextColor="@color/primary"
+                    android:textColorHint="@color/blue_dark"
+                    app:hintTextColor="@color/blue_dark"
                     android:layout_alignParentEnd="true"
                     android:layout_toEndOf="@+id/img_icon_new_habit"
                     app:boxBackgroundColor="@android:color/transparent"
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/blue_dark"
                 android:layout_marginBottom="8dp"
                 android:text="Ulangi"/>
             <LinearLayout
@@ -205,7 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textColor="@color/primary"
+                android:textColor="@color/blue_dark"
                 android:textStyle="bold"
                 android:text="Target Harian"/>
             <LinearLayout
@@ -296,7 +296,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/blue_dark"
                 android:text="Atur Waktu"/>
             <LinearLayout
                 android:id="@+id/layout_parent_set_time_picker"
@@ -321,7 +321,7 @@
                         android:textSize="@dimen/font_title"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:text="Lakukan Pada"/>
+                        android:text="Lakukan Pada Jam"/>
                     <TextView
                         android:id="@+id/tv_do_at"
                         android:layout_width="wrap_content"
@@ -367,7 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/blue_dark"
                 android:text="Selesai Pada"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -413,9 +413,8 @@
             <Button
                 android:id="@+id/btn_save_new_habit"
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/primary"
+                android:backgroundTint="@color/blue_dark"
                 android:textColor="@color/white"
                 android:text="Simpan" />
 
